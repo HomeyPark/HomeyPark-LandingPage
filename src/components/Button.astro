@@ -1,0 +1,30 @@
+
+---
+interface Props {
+    type:string;
+}
+const{
+    type
+}=Astro.props
+---
+<button class={`btn ${type === "secondary" ? "btn--secondary": ""}`}>
+    <slot/>
+</button>
+
+
+<style>
+    .btn{
+        height:36px;
+        padding-inline: 24px;
+        border-radius: 7px;
+        background-color: #55AA87;
+        color:white;
+        border: none;
+        font-family:Mulish, system-ui;
+    }
+    .btn--secondary{
+        background:transparent;
+        color:#55AA87;
+        border:1px solid #55AA87;
+    }
+</style>
