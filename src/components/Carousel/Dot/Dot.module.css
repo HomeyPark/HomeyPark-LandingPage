@@ -1,0 +1,14 @@
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  outline: none;
+  border: none;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  background: #d9d9d9;
+}
+.activeDot {
+  width: 2rem;
+  background: #55aa87;
+}

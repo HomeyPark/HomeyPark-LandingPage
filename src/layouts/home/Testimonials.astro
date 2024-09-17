@@ -1,0 +1,15 @@
+---
+import TestimonialsCarousel from '../../components/TestimonialCarousel/TestimonialCarousel'
+import testimonialsJson from '../../data/testimonials.json'
+
+const testimonials = testimonialsJson
+---
+
+<section class="py-4">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-5xl text-[#55AA87] font-bold rubik">Our testimonials</h1>
+    <div>
+      <TestimonialsCarousel reviews={testimonials} client:load />
+    </div>
+  </div>
+</section>

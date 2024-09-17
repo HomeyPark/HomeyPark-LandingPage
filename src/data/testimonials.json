@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Maria Perez",
+    "address": "Lima, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/women/78.jpg",
+    "rating": 5,
+    "review": "“Excelente servicio! Los estacionamientos son seguros y el personal es muy amable. Recomiendo esta aplicación a todos los propietarios de viviendas en Lima.”"
+  },
+  {
+    "name": "Carlos Rodriguez",
+    "address": "Arequipa, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/men/78.jpg",
+    "rating": 4.5,
+    "review": "“Muy útil para encontrar estacionamientos cerca de mi casa. La aplicación es fácil de usar y los precios son razonables. ¡Gracias!”"
+  },
+  {
+    "name": "Ana Gomez",
+    "address": "Trujillo, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/women/12.jpg",
+    "rating": 4,
+    "review": "“Me encanta esta aplicación. Siempre encuentro estacionamientos disponibles y el proceso de reserva es muy sencillo.”"
+  },
+  {
+    "name": "Pedro Sanchez",
+    "address": "Cusco, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/men/71.jpg",
+    "rating": 3.5,
+    "review": "“Buen servicio en general. A veces los precios son un poco altos, pero en general estoy satisfecho.”"
+  },
+  {
+    "name": "Laura Torres",
+    "address": "Piura, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/women/22.jpg",
+    "rating": 4.2,
+    "review": "“La aplicación es muy útil para encontrar estacionamientos cerca de mi trabajo. Los precios son razonables y el servicio es confiable.”"
+  },
+  {
+    "name": "Diego Chavez",
+    "address": "Chiclayo, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/men/21.jpg",
+    "rating": 4.8,
+    "review": "“Excelente aplicación. Me ha ayudado a ahorrar tiempo y dinero al encontrar estacionamientos seguros y a buen precio.”"
+  },
+  {
+    "name": "Sofia Ramirez",
+    "address": "Iquitos, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/women/37.jpg",
+    "rating": 4.6,
+    "review": "“Muy buena aplicación. Los estacionamientos son seguros y el personal es amable. La recomendaría a mis amigos y familiares.”"
+  },
+  {
+    "name": "Javier Castro",
+    "address": "Tacna, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/men/41.jpg",
+    "rating": 3.9,
+    "review": "“La aplicación es fácil de usar y los estacionamientos son seguros. Sin embargo, a veces es difícil encontrar disponibilidad en horas punta.”"
+  },
+  {
+    "name": "Valeria Lopez",
+    "address": "Huancayo, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/women/7.jpg",
+    "rating": 4.1,
+    "review": "“Buena aplicación para encontrar estacionamientos cerca de mi casa. Los precios son razonables y el servicio es confiable.”"
+  },
+  {
+    "name": "Ricardo Fernandez",
+    "address": "Chimbote, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/men/57.jpg",
+    "rating": 4.3,
+    "review": "“Me gusta esta aplicación. Es fácil de usar y siempre encuentro estacionamientos disponibles cerca de mi ubicación.”"
+  },
+  {
+    "name": "Isabella Morales",
+    "address": "Ica, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/women/67.jpg",
+    "rating": 4.7,
+    "review": "“Excelente servicio. Los estacionamientos son seguros y el personal es amable. La recomendaría a otros conductores.”"
+  },
+  {
+    "name": "Juan Perez",
+    "address": "Lima, Peru",
+    "imageSrc": "https://randomuser.me/api/portraits/men/88.jpg",
+    "rating": 4.9,
+    "review": "“La aplicación es genial. Siempre encuentro estacionamientos disponibles y el proceso de reserva es muy rápido.”"
+  }
+]

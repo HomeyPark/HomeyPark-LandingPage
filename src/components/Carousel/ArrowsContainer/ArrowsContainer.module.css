@@ -1,0 +1,16 @@
+.arrowsContainer {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.arrow {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
