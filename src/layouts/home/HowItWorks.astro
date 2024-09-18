@@ -21,38 +21,50 @@ const stepList = [
 ]
 ---
 
-<section class="py-20">
-  <div class="text-center mb-10">
-    <h2 class="text-5xl font-bold text-[#55AA87] rubik">How it works?</h2>
-    <br />
-  </div>
+<section class="py-20 max-lg:py-14">
+  <div class="max-lg:container mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-5xl font-bold text-[#55AA87] rubik max-lg:text-4xl">
+        How it works?
+      </h2>
+      <br />
+    </div>
 
-  <div class="max-w-6xl mx-auto space-y-16">
-    {
-      stepList.map((step, i) => (
-        <div class:list={['flex flex-row', { 'flex-row-reverse': i % 2 }]}>
-          <div class="w-full mt-10">
-            <span class="text-[40px] rubik leading-none block font-bold text-[#A7E5BD] mb-1">
-              {(i + 1).toString().padStart(2, '0')}
-            </span>
-            <h3 class="text-[40px] leading-none rubik font-bold text-[#55AA87] mb-4">
-              {step.title}
-            </h3>
-            <p class="text-black">{step.description}</p>
-          </div>
+    <div class="max-w-6xl mx-auto space-y-16">
+      {
+        stepList.map((step, i) => (
+          <div
+            class:list={[
+              'flex flex-row max-lg:items-center',
+              { 'flex-row-reverse': i % 2 },
+            ]}
+          >
+            <div class="w-full mt-10 max-lg:mt-0 ">
+              <span class="text-[40px] rubik leading-none block font-bold text-[#A7E5BD] mb-1 max-lg:text-3xl max-lg:leading-none">
+                {(i + 1).toString().padStart(2, '0')}
+              </span>
+              <h3 class="text-[40px] leading-none rubik font-bold text-[#55AA87] mb-4 max-lg:text-3xl max-lg:mb-2">
+                {step.title}
+              </h3>
+              <p class="text-black max-lg:text-sm">{step.description}</p>
+            </div>
 
-          <div class="w-full">
-            <img
-              src="https://i.ibb.co/ftyy93P/Group-1000004222.png"
-              alt={step.title}
-              class:list={[
-                'mx-auto w-[296px] h-[414.77px]',
-                { 'ml-16': i % 2, 'mr-16': !(i % 2) },
-              ]}
-            />
+            <div class="w-full">
+              <img
+                src="https://i.ibb.co/ftyy93P/Group-1000004222.png"
+                alt={step.title}
+                class:list={[
+                  'mx-auto w-[296px] h-[414.77px] max-lg:w-1/2 max-lg:h-auto',
+                  {
+                    'ml-16 max-lg:ml-auto': i % 2,
+                    'mr-16 max-lg:mr-auto': !(i % 2),
+                  },
+                ]}
+              />
+            </div>
           </div>
-        </div>
-      ))
-    }
+        ))
+      }
+    </div>
   </div>
 </section>
