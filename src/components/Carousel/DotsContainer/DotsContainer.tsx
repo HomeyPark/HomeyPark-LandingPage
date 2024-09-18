@@ -21,7 +21,7 @@ const DotsContainer: FC<DotsContainerProps> = ({
   )
 
   return (
-    <div className={`${styles.dotsContainer} absolute -top-6 right-0`}>
+    <div className={`${styles.dotsContainer} absolute -top-7 right-2`}>
       {Array.from({ length: totalDots }).map((_, index) => (
         <Dot
           currentSlide={currentSlide}

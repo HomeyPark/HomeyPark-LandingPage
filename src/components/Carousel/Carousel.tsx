@@ -9,8 +9,14 @@ interface CarouselProps {
   itemsPerPage?: number
   slides: ReactNode[]
   gap?: number
+  showArrow?: boolean
 }
-const Carousel: FC<CarouselProps> = ({ itemsPerPage = 1, slides, gap = 0 }) => {
+const Carousel: FC<CarouselProps> = ({
+  itemsPerPage = 1,
+  slides,
+  gap = 0,
+  showArrow,
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slideContainerStyle: CSSProperties = {
@@ -65,12 +71,14 @@ const Carousel: FC<CarouselProps> = ({ itemsPerPage = 1, slides, gap = 0 }) => {
         </div>
       </div>
 
-      <div className={styles.actionsContainer}>
-        <ArrowsContainer
-          onPrevPage={handlePrevPage}
-          onNextPage={handleNextPage}
-        />
-      </div>
+      {showArrow && (
+        <div className={styles.actionsContainer}>
+          <ArrowsContainer
+            onPrevPage={handlePrevPage}
+            onNextPage={handleNextPage}
+          />
+        </div>
+      )}
     </div>
   )
 }

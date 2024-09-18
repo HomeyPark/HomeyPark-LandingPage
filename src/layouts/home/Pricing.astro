@@ -1,62 +1,89 @@
-<section class="py-12 bg-white">
+---
+const driverPricingItems = [
+  {
+    image: 'https://i.ibb.co/1dJM36n/Group-1000004186.png',
+    title: 'Choose the service that fits your convenience.',
+    description: 'Find the perfect option for you with just a few clicks.',
+  },
+  {
+    image: 'https://i.ibb.co/j8F7Hp3/Group-1000004187.png',
+    title: 'Many rates, many garages',
+    description: 'Choose from a wide variety of available parking spots.',
+  },
+  {
+    image: 'https://i.ibb.co/fGWLjBq/Group-1000004188.png',
+    title: 'Fast and secure payments',
+    description: 'Payment gateway verified by multiple organizations.',
+  },
+]
+
+const hostPricingItems = [
+  {
+    image: 'https://i.ibb.co/Thp27TY/Group-1000004185.png',
+    title: 'Set the rate for your parking spot',
+    description: 'Customize your pricing and manage your space effortlessly.',
+  },
+  {
+    image: 'https://i.ibb.co/6gz9YtF/Group-1000004184.png',
+    title: 'Daily earnings',
+    description: 'Generate daily passive and/or active income with our app.',
+  },
+  {
+    image: 'https://i.ibb.co/nBrsbj8/Group-1000004183.png',
+    title: 'Instant payment transfers',
+    description: 'Direct communication with financial institutions.',
+  },
+]
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto">
     <div class="text-center mb-10">
-        <h2 class="text-[48px] font-extrabold text-[#55AA87] mr-11" >Pricing</h2>
+      <h2 class="text-5xl rubik font-bold text-[#55AA87]">Pricing</h2>
     </div>
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+    <div class="max-w-5xl mx-auto flex gap-20">
+      <div class="w-full">
+        <h3 class="text-2xl font-bold rubik text-[#55AA87] mb-6">Drivers</h3>
+        <ul class="space-y-10">
+          {
+            driverPricingItems.map((item) => (
+              <li class="flex items-center">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  class="w-[72px] h-[72px] mr-3"
+                />
+                <div>
+                  <h4 class="text-lg font-bold text-[#525252]">{item.title}</h4>
+                  <p class="text-[#525252]">{item.description}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
 
-        <div>
-            <h3 class="text-2xl font-extrabold text-[#55AA87] mb-6">Drivers</h3>
-            <ul class="space-y-4">
-                <li class="flex items-start">
-                    <img src="https://i.ibb.co/1dJM36n/Group-1000004186.png" alt="Choose service" class="w-[72px] h-[72px] mr-3">
-                    <div>
-                        <h4 class="text-lg font-bold text-[#525252]">Choose the service that fits your convenience.</h4>
-                        <p class="text-[#525252]">Find the perfect option for you with just a few clicks.</p>
-                    </div>
-                </li>
-                <li class="flex items-start">
-                    <img src="https://i.ibb.co/j8F7Hp3/Group-1000004187.png" alt="Many rates" class="w-[72px] h-[72px] mr-3">
-                    <div>
-                        <h4 class="text-lg font-bold text-[#525252]">Many rates, many garages</h4>
-                        <p class="text-[#525252]">Choose from a wide variety of available parking spots.</p>
-                    </div>
-                </li>
-                <li class="flex items-start">
-                    <img src="https://i.ibb.co/fGWLjBq/Group-1000004188.png" alt="Fast payments" class="w-[72px] h-[72px] mr-3">
-                    <div>
-                        <h4 class="text-lg font-bold text-[#525252]">Fast and secure payments</h4>
-                        <p class="text-[#525252]">Payment gateway verified by multiple organizations.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="ml-20">
-            <h3 class="text-2xl font-extrabold text-[#55AA87] mb-6 ">Hosts</h3>
-            <ul class="space-y-4">
-                <li class="flex items-start">
-                    <img src="https://i.ibb.co/Thp27TY/Group-1000004185.png" alt="Set rate" class="w-[72px] h-[72px] mr-3">
-                    <div>
-                        <h4 class="text-lg font-bold text-[#525252]">Set the rate for your parking spot</h4>
-                        <p class="text-[#525252]">Customize your pricing and manage your space effortlessly.</p>
-                    </div>
-                </li>
-                <li class="flex items-start">
-                    <img src="https://i.ibb.co/6gz9YtF/Group-1000004184.png" alt="Daily earnings" class="w-[72px] h-[72px] mr-3">
-                    <div>
-                        <h4 class="text-lg font-bold text-[#525252]">Daily earnings</h4>
-                        <p class="text-[#525252]">Generate daily passive and/or active income with our app.</p>
-                    </div>
-                </li>
-                <li class="flex items-start">
-                    <img src="https://i.ibb.co/nBrsbj8/Group-1000004183.png" alt="Instant transfers" class="w-[72px] h-[72px] mr-3">
-                    <div>
-                        <h4 class="text-lg font-bold text-[#525252]">Instant payment transfers</h4>
-                        <p class="text-[#525252]"> Direct communication with financial institutions.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <div class="w-full">
+        <h3 class="text-2xl font-extrabold text-[#55AA87] mb-6">Hosts</h3>
+        <ul class="space-y-10">
+          {
+            hostPricingItems.map((item) => (
+              <li class="flex items-center">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  class="w-[72px] h-[72px] mr-3"
+                />
+                <div>
+                  <h4 class="text-lg font-bold text-[#525252]">{item.title}</h4>
+                  <p class="text-[#525252]">{item.description}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
+  </div>
 </section>
