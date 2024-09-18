@@ -21,23 +21,27 @@ const items = [
 ]
 ---
 
-<section class="bg-white mt-20 py-20">
-  <div class="max-w-6xl mx-auto">
+<section class="bg-white mt-20 py-20 px-4 max-lg:py-10">
+  <div class="max-w-6xl mx-auto max-lg:container">
     <div class="text-center">
-      <h2 class="text-5xl rubik font-bold text-[#55AA87]">Why Choose Us?</h2>
+      <h2 class="text-5xl rubik font-bold text-[#55AA87] max-lg:text-4xl">
+        Why Choose Us?
+      </h2>
     </div>
 
-    <div class="mt-10 flex flex-row">
+    <div class="mt-10 flex flex-row max-lg:gap-x-4">
       {
         items.map((item) => (
-          <div class="bg-transparent p-8 text-center">
+          <div class="bg-transparent p-8 text-center max-lg:p-0">
             <img
               src={item.image}
               alt={item.title}
               class="mx-auto mb-4 h-[80px] w-[80px]"
             />
-            <h3 class="text-xl rubik font-bold text-[#55AA87]">{item.title}</h3>
-            <p class="mt-2 text-black">{item.description}</p>
+            <h3 class="text-xl rubik font-bold text-[#55AA87] max-lg:text-base">
+              {item.title}
+            </h3>
+            <p class="mt-2 text-black max-lg:text-sm">{item.description}</p>
           </div>
         ))
       }
