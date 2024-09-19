@@ -4,23 +4,27 @@ import Button from '../../components/Button.astro'
 
 <section class="px-4">
   <div
-    class="max-w-7xl mx-auto flex flex-row items-center justify-between px-4 pt-24 pb-32 max-lg:container max-lg:px-0 max-lg:gap-x-6"
+    class="max-w-7xl mx-auto flex flex-row items-center justify-between px-4 pt-24 pb-32 max-lg:container max-lg:px-0 max-lg:gap-x-6 max-md:flex-col max-md:pt-16 max-md:pb-10"
   >
-    <div class="text-center md:text-left md:w-3/5">
+    <div
+      class="text-center md:text-left md:w-3/5 max-md:text-left max-md:mb-12"
+    >
       <h1
-        class="text-6xl font-bold text-[#55AA87] rubik leading-tight mb-4 max-lg:text-5xl max-lg:leading-tight"
+        class="text-6xl font-bold text-[#55AA87] rubik leading-tight mb-4 max-lg:text-5xl max-lg:leading-tight max-md:text-4xl"
       >
         Find your spot,<br />
         hassle-free
       </h1>
-      <p class="text-gray-600 text-xl mb-6 max-lg:text-lg">
+      <p
+        class="text-gray-600 text-xl mb-6 max-lg:text-lg max-md:text-sm max-md:leading-relaxed"
+      >
         We are a platform that simplifies exploring new transportation options,
         promoting sustainable mobility and environmental care.
       </p>
-      <Button type="primary"> Get started </Button>
+      <Button type="primary">Get started</Button>
     </div>
 
-    <div class="mr-16 flex justify-center md:w-2/5 max-lg:mr-0">
+    <div class="mr-16 flex justify-center md:w-2/5 max-lg:mr-0 max-md:max-w-64">
       <img
         src="https://i.ibb.co/CPQZfNz/Frame-1000004214-2.png"
         alt="HomeyPark App"
@@ -32,12 +36,10 @@ import Button from '../../components/Button.astro'
 
 <section>
   <div class="bg-[#F9F9F9] py-3 px-4">
-    <p class="text-sm text-center">
+    <p class="text-sm text-center max-w-3xl mx-auto max-md:text-xs">
       Over 3,000 users already trust HomeyPark to find their perfect parking
-      spot effortlessly, exploring new ways to park and move <br
-        class="max-lg:hidden"
-      />
-      around the city without the stress of searching for space.
+      spot effortlessly, exploring new ways to park and move around the city
+      without the stress of searching for space.
     </p>
   </div>
 </section>

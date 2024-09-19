@@ -1,65 +1,51 @@
-
 ---
-import Button from "../../components/Button.astro"
+import Button from '../../components/Button.astro'
 ---
 
 <header>
-    <nav class="nav">
-        <div><img src="https://i.ibb.co/BPb408Z/image-3.png" alt="logo" class="logo"></div>
-        <div>
-            <ul class="nav-links">
-                <li>
-                    Home 
-                </li>
-                <li>
-                    Why Choose us?
-                </li>
-                <li>
-                    How it works?
-                </li>
-                <li>
-                    Testimonials
-                </li>
-                <li>
-                    Pricing
-                </li>
-            </ul>
-        </div>
-        <div>
-        <Button type="secondary">
-         Sign in   
-        </Button>
+  <nav class="nav">
+    <div>
+      <img src="https://i.ibb.co/BPb408Z/image-3.png" alt="logo" class="logo" />
+    </div>
+    <div class="max-lg:hidden">
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>Why Choose us?</li>
+        <li>How it works?</li>
+        <li>Testimonials</li>
+        <li>Pricing</li>
+      </ul>
+    </div>
+    <div class="max-lg:hidden">
+      <Button type="secondary"> Sign in </Button>
 
-        <Button type="primary">
-            Sign up   
-           </Button>
-     </div>
-    </nav>
+      <Button type="primary"> Sign up </Button>
+    </div>
+  </nav>
 </header>
 
 <style>
-.nav{
+  .nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding-inline: 24px;
     align-items: center;
-}
-header{
+  }
+  header {
     height: 80px;
     display: flex;
     align-items: center;
-    box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.10);
-}
-.nav-links{
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
+  }
+  .nav-links {
     list-style: none;
     display: flex;
-    gap:32px;
+    gap: 32px;
     align-items: center;
-}
-.logo{
-    display:block;
+  }
+  .logo {
+    display: block;
     height: 60px;
-
-}
+  }
 </style>
