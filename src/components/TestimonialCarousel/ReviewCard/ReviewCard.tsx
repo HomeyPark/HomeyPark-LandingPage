@@ -17,23 +17,25 @@ const ReviewCard: FC<ReviewCardProps> = ({
   review: { imageSrc, name, address, rating, review },
 }) => {
   return (
-    <article className={`${styles.reviewCard} shadow-md`}>
+    <article className={`p-6 shadow-md h-full rounded-md max-lg:p-4`}>
       <header className={styles.reviewCardHeader}>
-        <div className={styles.reviewerProfileImg}>
-          <img src={imageSrc} alt={name} loading="lazy" />
+        <div className="w-48 h-48 rounded-full overflow-hidden max-lg:w-28 max-lg:h-28">
+          <img
+            className="w-full h-full"
+            src={imageSrc}
+            alt={name}
+            loading="lazy"
+          />
         </div>
         <div className="flex w-full">
-          <div className={styles.reviewerInfo}>
-            <span className={`body-1 text-lg ${styles.reviewerName}`}>
-              {name}
-            </span>
-            <span className={`body-2 ${styles.reviewerAddress}`}>
-              {address}
-            </span>
+          <div className="flex flex-col w-full">
+            <span className="text-lg font-bold max-lg:text-base">{name}</span>
+            <span className="font-semibold max-lg:text-sm">{address}</span>
           </div>
-          <div className={styles.ratingContainer}>
+          <div className="flex items-center shrink-0 gap-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              className="max-lg:w-4 max-lg:h-4"
               width="21"
               height="20"
               viewBox="0 0 21 20"
@@ -44,15 +46,13 @@ const ReviewCard: FC<ReviewCardProps> = ({
                 fill="#EF6C42"
               />
             </svg>
-            <span className={`body-2 ${styles.rating}`}>
+            <span className="font-bold max-lg:text-sm">
               {rating.toFixed(1)}
             </span>
           </div>
         </div>
       </header>
-      <blockquote className={`body-2 ${styles.reviewContent}`}>
-        {review}
-      </blockquote>
+      <blockquote className="max-lg:text-sm">{review}</blockquote>
     </article>
   )
 }
