@@ -21,7 +21,7 @@ const DotsContainer: FC<DotsContainerProps> = ({
   )
 
   return (
-    <div className="flex gap-2 absolute -top-7 right-2">
+    <div className="flex gap-2">
       {Array.from({ length: totalDots }).map((_, index) => (
         <Dot
           currentSlide={currentSlide}

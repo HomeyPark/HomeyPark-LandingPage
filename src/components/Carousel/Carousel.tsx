@@ -4,6 +4,8 @@ import styles from './Carousel.module.css'
 
 import DotsContainer from './DotsContainer'
 import ArrowsContainer from './ArrowsContainer'
+import Dot from './Dot'
+import useMediaQuery from '../../react/hooks/useMediaQuery'
 
 interface CarouselProps {
   itemsPerPage?: number
@@ -18,6 +20,7 @@ const Carousel: FC<CarouselProps> = ({
   showArrow,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
   const slideContainerStyle: CSSProperties = {
     minWidth: `${100 * slides.length}%`,
@@ -45,12 +48,16 @@ const Carousel: FC<CarouselProps> = ({
 
   return (
     <div className={styles.carousel}>
-      <DotsContainer
-        currentSlide={currentSlide}
-        itemsPerPage={itemsPerPage}
-        onChangePage={handleChangePage}
-        slides={slides}
-      />
+      {!isMobile && (
+        <div className="absolute -top-7 right-2">
+          <DotsContainer
+            currentSlide={currentSlide}
+            itemsPerPage={itemsPerPage}
+            onChangePage={handleChangePage}
+            slides={slides}
+          />
+        </div>
+      )}
       <div className="overflow-hidden">
         <div
           className={`${styles.slideContainer} pb-4`}
@@ -70,6 +77,17 @@ const Carousel: FC<CarouselProps> = ({
           ))}
         </div>
       </div>
+
+      {isMobile && (
+        <div className="flex justify-center">
+          <DotsContainer
+            currentSlide={currentSlide}
+            itemsPerPage={itemsPerPage}
+            onChangePage={handleChangePage}
+            slides={slides}
+          />
+        </div>
+      )}
 
       {showArrow && (
         <div className={styles.actionsContainer}>

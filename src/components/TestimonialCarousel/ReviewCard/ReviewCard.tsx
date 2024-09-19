@@ -17,9 +17,9 @@ const ReviewCard: FC<ReviewCardProps> = ({
   review: { imageSrc, name, address, rating, review },
 }) => {
   return (
-    <article className={`p-6 shadow-md h-full rounded-md max-lg:p-4`}>
-      <header className={styles.reviewCardHeader}>
-        <div className="w-48 h-48 rounded-full overflow-hidden max-lg:w-28 max-lg:h-28">
+    <article className="p-6 shadow-md h-full rounded-md max-lg:p-4">
+      <header className="flex flex-col gap-8 items-center mb-3 max-md:flex-row max-md:gap-4">
+        <div className="w-48 h-48 rounded-full overflow-hidden max-lg:w-28 max-lg:h-28 max-md:w-16 max-md:h-16 shrink-0">
           <img
             className="w-full h-full"
             src={imageSrc}
@@ -27,9 +27,11 @@ const ReviewCard: FC<ReviewCardProps> = ({
             loading="lazy"
           />
         </div>
-        <div className="flex w-full">
+        <div className="flex w-full max-md:flex-col">
           <div className="flex flex-col w-full">
-            <span className="text-lg font-bold max-lg:text-base">{name}</span>
+            <span className="text-lg font-bold max-lg:text-base max-md:text-sm">
+              {name}
+            </span>
             <span className="font-semibold max-lg:text-sm">{address}</span>
           </div>
           <div className="flex items-center shrink-0 gap-1">
@@ -46,13 +48,15 @@ const ReviewCard: FC<ReviewCardProps> = ({
                 fill="#EF6C42"
               />
             </svg>
-            <span className="font-bold max-lg:text-sm">
+            <span className="font-bold max-lg:text-sm ">
               {rating.toFixed(1)}
             </span>
           </div>
         </div>
       </header>
-      <blockquote className="max-lg:text-sm">{review}</blockquote>
+      <blockquote className="max-lg:text-sm max-md:text-xs !leading-relaxed">
+        {review}
+      </blockquote>
     </article>
   )
 }
