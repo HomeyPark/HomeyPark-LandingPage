@@ -2,53 +2,55 @@
 import Button from '../../components/Button.astro'
 ---
 
-<section class="py-12 bg-white">
+<section class="py-12 px-4 max-md:py-6">
   <div
-    class="w-fit mx-auto flex items-stretch rounded-lg overflow-hidden justify-center px-6"
+    class="max-w-4xl mx-auto flex bg-form rounded-lg overflow-hidden max-lg:container max-md:flex-col-reverse"
   >
     <div
-      class="rounded-md overflow-hidden shadow-sm flex w-full justify-center max-lg:container"
+      class="py-8 px-12 bg-gradient-to-r justify-center w-3/5 text-white max-lg:p-6 max-md:w-full"
     >
-      <div
-        class="w-1/2 max-lg:w-3/5 rounded-l-md p-6 bg-gradient-to-r from-[#A4DEAA] to-[#D1EECF] flex flex-col justify-center"
-      >
-        <h3
-          class="text-2xl font-bold text-gray-800 mb-4 max-lg:text-xl max-lg:mb-2"
+      <h3 class="text-2xl font-bold mb-2 max-lg:text-xl max-lg:mb-2 rubik">
+        Contact us
+      </h3>
+      <p class="mb-6 max-lg:text-xs">
+        Our team is always here to help and ensure you have the best experience
+        possible. Contact us anytime, and we’ll get back to you as soon as we
+        can!
+      </p>
+      <form class="space-y-4 text-gray-600 max-lg:text-sm">
+        <div class="flex space-x-4">
+          <input
+            type="text"
+            placeholder="Name"
+            class="w-1/2 p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 max-lg:h-9 max-lg:text-xs"
+          />
+          <input
+            type="email"
+            placeholder="Email address"
+            class="w-1/2 p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 max-lg:h-9 max-lg:text-xs"
+          />
+        </div>
+        <textarea
+          placeholder="Message"
+          class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 max-lg:text-xs"
+        ></textarea>
+        <Button type="primary" class="!bg-[#2E5F40] max-md:!text-xs max-md:!h-8"
+          >Submit</Button
         >
-          Contact us
-        </h3>
-        <p class="text-gray-700 mb-6 max-lg:text-sm">
-          Our team is always here to help and ensure you have the best
-          experience possible. Contact us anytime, and we’ll get back to you as
-          soon as we can!
-        </p>
-        <form class="space-y-4">
-          <div class="flex space-x-4">
-            <input
-              type="text"
-              placeholder="Name"
-              class="w-1/2 p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 max-lg:h-9 max-lg:text-sm"
-            />
-            <input
-              type="email"
-              placeholder="Email address"
-              class="w-1/2 p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 max-lg:h-9 max-lg:text-sm"
-            />
-          </div>
-          <textarea
-            placeholder="Message"
-            class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 max-lg:text-sm"
-          ></textarea>
-          <Button type="primary">Submit</Button>
-        </form>
-      </div>
-      <div class="rounded-r-md overflow-hidden max-lg:w-2/5">
-        <img
-          src="https://i.ibb.co/t22gn45/Group-1000004209.png"
-          alt="Contact us image"
-          class="w-[393px] h-[447px] max-lg:object-cover max-lg:h-full"
-        />
-      </div>
+      </form>
+    </div>
+    <div class="w-2/5 max-md:w-full">
+      <img
+        src="https://i.ibb.co/t22gn45/Group-1000004209.png"
+        alt="Contact us image"
+        class="h-full w-auto object-cover max-md:w-full max-md:max-h-60"
+      />
     </div>
   </div>
 </section>
+
+<style>
+  .bg-form {
+    background: linear-gradient(106deg, #55aa87 -3.46%, #89dca7 54.69%);
+  }
+</style>
