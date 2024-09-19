@@ -1,26 +1,41 @@
 ---
 import Button from '../../components/Button.astro'
+import NavSidebar from '../../components/react/NavSidebar'
+
+const navLinks = [
+  { label: 'Home', href: '#' },
+  { label: 'Why Choose us?', href: '#whyChooseUs' },
+  { label: 'How it works?', href: '#howItWorks' },
+  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Pricing', href: '#pricing' },
+]
 ---
 
-<header>
+<header class="max-lg:!h-16 fixed top-0 left-0 right-0 w-full bg-white z-40">
   <nav class="nav">
     <div>
-      <img src="https://i.ibb.co/BPb408Z/image-3.png" alt="logo" class="logo" />
+      <img
+        src="https://i.ibb.co/BPb408Z/image-3.png"
+        alt="logo"
+        class="logo max-lg:!h-12"
+      />
     </div>
     <div class="max-lg:hidden">
       <ul class="nav-links">
-        <li>Home</li>
-        <li>Why Choose us?</li>
-        <li>How it works?</li>
-        <li>Testimonials</li>
-        <li>Pricing</li>
+        {
+          navLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
       </ul>
     </div>
     <div class="max-lg:hidden">
-      <Button type="secondary"> Sign in </Button>
-
-      <Button type="primary"> Sign up </Button>
+      <Button type="secondary">Sign in</Button>
+      <Button type="primary">Sign up</Button>
     </div>
+    <NavSidebar client:only navLinks={navLinks} />
   </nav>
 </header>
 
