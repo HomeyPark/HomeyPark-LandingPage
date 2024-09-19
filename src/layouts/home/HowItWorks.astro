@@ -23,30 +23,31 @@ const stepList = [
 
 <section class="py-20 max-lg:py-14 px-4">
   <div class="max-lg:container mx-auto">
-    <div class="text-center mb-10">
-      <h2 class="text-5xl font-bold text-[#55AA87] rubik max-lg:text-4xl">
-        How it works?
-      </h2>
-      <br />
-    </div>
+    <h2
+      class="text-5xl font-bold mb-16 text-[#55AA87] rubik max-lg:mb-12 max-lg:text-4xl max-md:text-2xl text-center max-md:text-start max-md:mb-7"
+    >
+      How it works?
+    </h2>
 
-    <div class="max-w-6xl mx-auto space-y-16">
+    <div class="max-w-6xl mx-auto space-y-16 max-md:space-y-8">
       {
         stepList.map((step, i) => (
           <div
             class:list={[
-              'flex flex-row max-lg:items-center',
+              'flex flex-row max-lg:items-center max-md:flex-col',
               { 'flex-row-reverse': i % 2 },
             ]}
           >
-            <div class="w-full mt-10 max-lg:mt-0 ">
-              <span class="text-[40px] rubik leading-none block font-bold text-[#A7E5BD] mb-1 max-lg:text-3xl max-lg:leading-none">
+            <div class="w-full mt-10 max-lg:mt-0 max-md:mb-4">
+              <span class="text-[40px] rubik leading-none block font-bold text-[#A7E5BD] mb-1 max-lg:text-3xl max-lg:leading-none max-md:text-lg max-md:leading-none max-md:mb-0">
                 {(i + 1).toString().padStart(2, '0')}
               </span>
-              <h3 class="text-[40px] leading-none rubik font-bold text-[#55AA87] mb-4 max-lg:text-3xl max-lg:mb-2">
+              <h3 class="text-[40px] leading-none rubik font-bold text-[#55AA87] mb-4 max-lg:text-3xl max-lg:mb-0 max-md:text-lg">
                 {step.title}
               </h3>
-              <p class="text-black max-lg:text-sm">{step.description}</p>
+              <p class="text-black max-lg:text-sm max-md:text-xs max-md:leading-relaxed">
+                {step.description}
+              </p>
             </div>
 
             <div class="w-full">
